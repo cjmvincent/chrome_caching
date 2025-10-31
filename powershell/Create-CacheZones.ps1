@@ -16,23 +16,10 @@ Param(
     [parameter(ParameterSetName="Cache",mandatory=$false)][switch]$StandaloneDns
 )
 
-# $microsoftZones = @(
-#     [PSCustomObject]@{ Zone='download.windowsupdate.com'; Record='Both' },
-#     [PSCustomObject]@{ Zone='tlu.dl.delivery.mp.microsoft.com'; Record='Both' },
-#     [PSCustomObject]@{ Zone='officecdn.microsoft.com'; Record='Root' },
-#     [PSCustomObject]@{ Zone='officecdn.microsoft.com.edgesuite.net'; Record='Root' }
-# )
-
 $googleZones = @(
     [PSCustomObject]@{ Zone='dl.google.com'; Record='Root' },
     [PSCustomObject]@{ Zone='gvt1.com'; Record='WildCard' }
 )
-
-# $adobeZones = @(
-#     [PSCustomObject]@{ Zone='ardownload.adobe.com'; Record='Root' },
-#     [PSCustomObject]@{ Zone='ccmdl.adobe.com'; Record='Root' },
-#     [PSCustomObject]@{ Zone='agsupdate.adobe.com'; Record='Root' }
-# )
 
 # $zoneGroup = $microsoftZones + $googleZones + $adobeZones
 $zoneGroup = $googleZones
